@@ -15,7 +15,7 @@ const Header = () => {
             universal gift and its power to connect people is without question.
             It is an art form with human interaction at its centre.
           </p>
-          <a href="/home" className="btn header-btn btn-blue">
+          <a href="/" className="btn header-btn btn-blue">
             <span className="container">Find your music</span>
           </a>
         </div>

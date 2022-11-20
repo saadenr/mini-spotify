@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container w-100">
         <div className="navbar-content flex fw-7">
           <div className="brand-and-toggler flex flex-between w-100">
-            <Link to="/home" className="navbar-brand fs-26">
+            <Link to="/" className="navbar-brand fs-26">
               Saadoune.
             </Link>
             <div

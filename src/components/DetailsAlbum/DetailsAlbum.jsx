@@ -59,7 +59,7 @@ const DetailsAlbum = () => {
         <div className="content-right">
           <div className="head">
             <h3 className="title">{album.title}</h3>
-            <a href="/home" className="item-link text-grey">
+            <a href="/" className="item-link text-grey">
               <BsFillHeartFill size={20} />
             </a>
           </div>

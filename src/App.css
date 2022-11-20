@@ -4,7 +4,7 @@
 :root {
   --fnt-base: "Jost", sans-serif;
   --clr-robin-green: #1ed760;
-  --clr-crazy-blue: #1ed760;
+  --clr-crazy-blue: hsl(141, 63%, 65%);
   --clr-black: #000;
   --clr-md-black: #111;
   --clr-dark: #191919;

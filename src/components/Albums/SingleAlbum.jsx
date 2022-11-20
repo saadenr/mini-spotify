@@ -12,7 +12,7 @@ const SingleAlbum = ({ album, addToFavorites, heartIcon }) => {
 
   return (
     <div className="item bg-dark translate-effect">
-      <Link to={`/details/${album.album.id}`}>
+      <Link to={`/details/${album.album.id}`} target="_blank">
         <img alt="album_cover" src={album.album.cover_big} />
       </Link>
 

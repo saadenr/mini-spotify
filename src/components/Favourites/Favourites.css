@@ -20,8 +20,8 @@
   transform: translateX(-50%);
   width: 0%;
   height: 2px;
-  background: #1ed760;
-  background: linear-gradient(90deg, #52da81 0%, #1ed760 100%);
+  background: 1ed760;
+  background: linear-gradient(90deg, #52da81 0%, 1ed760 100%);
   transition: var(--transition);
 }
 .favourites .item:hover::after {
