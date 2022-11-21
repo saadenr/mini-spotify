@@ -1,6 +1,6 @@
 .header {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
     url("../../assets/images/header_main_img.jpg") center/cover no-repeat;
 }
 .header-content .text-lead {
@@ -15,7 +15,7 @@
     var(--clr-robin-green),
     var(--clr-crazy-blue)
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .header-btn {

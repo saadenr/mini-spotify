@@ -1,7 +1,4 @@
 .pagination {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin: 3rem 0;
 }
 
@@ -13,16 +10,12 @@
   font-size: 16px;
   margin: 0 10px;
   border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: transparent;
+  transition: all 0.2s ease;
   color: #eee;
-  border-color: #eee;
 }
 
 .pagination button:hover {
-  background-color: var(--clr-grey);
-  color: #101010;
+  border: 2px solid var(--clr-white);
   font-weight: 900;
 }
 

@@ -5,7 +5,7 @@ import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 import SearchBar from "../components/SearchBar/SearchBar";
 import * as actions from "../../constants/index";
 import SingleAlbum from "./SingleAlbum";
-import Pagination from "../pagination/Pagination";
+import Pagination from "../components/pagination/Pagination";
 
 import swal from "sweetalert";
 
@@ -17,20 +17,9 @@ const Albums = () => {
 
   useEffect(() => {
     actions.getAlbums().then((album) => setAlbums(album));
-    setCurrentPage(1);
   }, [favorites]);
 
-  // ////////////// Pagination Process /////////////
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6;
-
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts =
-    albums && albums.length ? albums.slice(firstPostIndex, lastPostIndex) : [];
-
-  // ///////////////////////////////////////////////
+  const pagination = Pagination(albums);
 
   const searchAlbums = (term) => {
     actions.getAlbums(term).then((item) => setAlbums(item));
@@ -79,7 +68,7 @@ const Albums = () => {
 
   const renderAlbums = () => {
     return albums && albums.length
-      ? currentPosts.map((item, index) => (
+      ? pagination.data.map((item, index) => (
           <SingleAlbum
             album={item}
             key={index}
@@ -98,13 +87,7 @@ const Albums = () => {
           <div className="albums-content">
             <div className="item-list grid text-white text-center">
               {albums && renderAlbums()}
-              <Pagination
-                totalPosts={albums.length}
-                postsPerPage={postsPerPage}
-                setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
-                albums={albums}
-              />
+              {pagination.render}
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-import { BsFillHeartFill } from "react-icons/bs";
+import { BsFillHeartFill, BsHouseDoorFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -39,9 +39,14 @@ const Navbar = () => {
             <div className="navbar-collapse-content">
               <ul className="navbar-nav">
                 <li className="text-white flex">
-                  <Link to="/favourites">Favourites</Link>
+                  <BsHouseDoorFill size={14} />
                   &nbsp;
-                  <BsFillHeartFill size={15} />
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="text-white flex">
+                  <BsFillHeartFill size={14} />
+                  &nbsp;
+                  <Link to="/favourites">Favourites</Link>
                 </li>
               </ul>
             </div>

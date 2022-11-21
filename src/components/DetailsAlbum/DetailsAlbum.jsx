@@ -29,7 +29,7 @@ const DetailsAlbum = () => {
   console.log(album);
 
   const renderAlbumDetails = () => {
-    return (
+    return album ? (
       <div className="detailsAlbum-content grid text-center">
         <div className="content-left">
           <img src={album.cover_big} alt="cover" />
@@ -67,7 +67,7 @@ const DetailsAlbum = () => {
           <div className="audio-preview">{renderTracks()}</div>
         </div>
       </div>
-    );
+    ) : null;
   };
 
   const renderTracks = () => {
